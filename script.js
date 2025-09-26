@@ -13,7 +13,6 @@ buttonPosts.addEventListener("click", (event) => {
     divPosts.classList.toggle("ocultar");
 });
 
-
 // Modo oscuro
 let darkButton = document.querySelector("#dark-button");
 
@@ -38,3 +37,42 @@ buttonPlus.addEventListener("click", (event) => {
         clickear = false;
     },500);
 });
+
+// barra de busqueda
+let suggestions = [
+    'Best of the week',
+    'Travel',
+    'Adds',
+];
+
+let barraBuscar = document.querySelector(".barra-buscar");
+let inputBuscar = document.querySelector("#input-buscar");
+let listaSugerencias = document.querySelector(".sugerencias");
+
+inputBuscar.onkeyup = (event) => {
+    let userData = event.target.value;
+    let emptyArray = [];
+    if (userData) {
+        emptyArray = suggestions.filter(data => {
+            return data.toLowerCase().startsWith(userData.toLowerCase())
+        });
+        emptyArray = emptyArray.map(data => {
+            return data = `<li>${data}</li>`;
+        });
+        mostrarSugerencias(emptyArray);
+    } else {
+        listaSugerencias.innerHTML = "";
+    }
+};
+
+const mostrarSugerencias = (list) => {
+    let listData;
+
+    if(!list.length) {
+        listData = '';
+    }
+    else {
+        listData = list.join('');
+    }
+    listaSugerencias.innerHTML = listData;
+}

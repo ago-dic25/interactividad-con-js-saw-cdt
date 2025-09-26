@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="styles.css">
-    <!--<script src="https://kit.fontawesome.com/6d11003e79.js" crossorigin="anonymous"></script>-->
 </head>
 <body class="dark">
     <header>
@@ -35,9 +34,14 @@
                     <button id="dark-button">Toggle dark mode</button>
                 </li>
             </ul>
-            <button id="buscar">
-                Buscar
-            </button>
+            <div class="barra-buscar">
+                <input id="input-buscar" type="text" placeholder="Escribe tu busqueda" autocomplete="off">
+                <button id="buscar">
+                    Buscar
+                </button>
+                <ul class="sugerencias ocultar">
+                </ul>
+            </div>
         </nav>
     </header>
     

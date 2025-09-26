@@ -236,3 +236,69 @@ section img, aside img {
      z-index: 1;
      pointer-events: none;
 }
+nav ul {
+     display: flex;
+     gap: 1rem;
+     list-style: none;
+     margin: 0;
+     padding: 0;
+}
+
+nav ul li {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.barra-buscar {
+     overflow: hidden;
+     padding: 10px;
+     position: relative;
+     width: 300px;
+}
+
+.barra-buscar button{
+     display: inline-block;
+     text-decoration: none;
+     color: white;
+     background: black;
+     border-radius: 5px;
+     padding: 5px;
+}
+
+.barra-buscar input {
+     display: inline-block;
+     margin-left: 10px;
+}
+
+.barra-buscar button:hover {
+     transform: scale(1.02);
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.804);
+}
+
+.barra-buscar button:active {
+     transform: scale(0.95);
+}
+
+
+.barra-buscar .sugerencias {
+     display: block;
+     overflow: hidden;
+     border-radius: 5px;
+     margin-top: 1px;
+     width: 177px;
+     margin-left: 10px;
+}
+
+.barra-buscar .sugerencias li {
+     display: block;
+     color: white;
+     padding: 10px;
+     background-color: black;
+     overflow: hidden;
+     white-space: nowrap;
+     cursor: pointer;
+}
+
+.barra-buscar .sugerencias li:hover {
+     background-color: rgb(31, 30, 30);
+}
