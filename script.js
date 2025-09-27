@@ -76,3 +76,28 @@ const mostrarSugerencias = (list) => {
     }
     listaSugerencias.innerHTML = listData;
 }
+
+// Galeria
+let seeAll = document.querySelector("#seeAll");
+let mainImg = seeAll.querySelector("img");
+let galeria = seeAll.querySelectorAll(".imagenes .imagen img");
+
+let intervalId;
+let index = 0;
+
+const originalSrc = mainImg.src;
+
+seeAll.addEventListener("mouseover", () => {
+    if (galeria.length == 0) return;
+
+    intervalId = setInterval(() => {
+        index = (index + 1) % galeria.length;
+        mainImg.src = galeria[index].src;
+    },2000);
+});
+
+seeAll.addEventListener("mouseout", () => {
+    clearInterval(intervalId);
+    index = 0;
+    mainImg.src = originalSrc;
+})

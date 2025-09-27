@@ -16,7 +16,7 @@ a{
 }
 
 .dark {
-     background: black;
+     background: #202124;
      color: white;
 }
 .buttonPosts {
@@ -206,7 +206,7 @@ section img, aside img {
 }
 
 #dark-button {
-     background: black;
+     background: #202124;
      color: white;
      border-radius: 5px;
      margin-top: 10px;
@@ -293,7 +293,7 @@ nav ul li {
      display: block;
      color: white;
      padding: 10px;
-     background-color: black;
+     background-color: #202124;
      overflow: hidden;
      white-space: nowrap;
      cursor: pointer;
