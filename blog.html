@@ -9,10 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="estilos.css">
-    <!--<script src="https://kit.fontawesome.com/6d11003e79.js" crossorigin="anonymous"></script>-->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="dark">
     <header>
         <img src="logo.png" alt="">
         <nav>
@@ -31,10 +30,18 @@
                  <li>
                     <a href="#">Crear Cuenta / Registro</a>
                 </li>
+                <li>
+                    <button id="dark-button">Toggle dark mode</button>
+                </li>
             </ul>
-            <button id="buscar">
-                Buscar
-            </button>
+            <div class="barra-buscar">
+                <input id="input-buscar" type="text" placeholder="Escribe tu busqueda" autocomplete="off">
+                <button id="buscar">
+                    Buscar
+                </button>
+                <ul class="sugerencias ocultar">
+                </ul>
+            </div>
         </nav>
     </header>
     
@@ -42,7 +49,13 @@
         <section>
             <div class="tarjeta" id="bestOfTheWeek">
                 <h1>Best of the week</h1>
-                <a href="#">See all posts</a>
+                <button id="buttonPosts" style="color:red;">See all posts</button>
+            </div>
+            <div class="posts ocultar" id="divPosts">
+                <div class="post">Experiencia como Podcaster</div>
+                <div class="post">Como empezar</div>
+                <div class="post">Como hacerte viral en tiktok</div>
+                <div class="post">Como crear reels para redes sociales</div>
             </div>
             <div class="tarjeta" id="travel">
                 <span>Sep 06, 2022</span>
@@ -57,16 +70,29 @@
         <aside>
             <div class="tarjeta" id="ads">
                 <span>ADS</span>
-                <button>+</button>
+                <button id="buttonPlus">+</button>
                 <span>Become a podcaster</span>
                 <h3>Real talk</h3>
             </div>
             <div  class="tarjeta" id="seeAll">
                 <img src="imagenes/soundtrap-n30_i7mx62o-unsplash.jpg" alt="" width="50%">
-                <button>See all pics</button>
+                <button id="buttonPics">See all pics</button>
+                <div class="imagenes ocultar" id="divPics">
+                    <div class="imagen">
+                        <img src="imagenes/arnel-hasanovic-MNd-Rka1o0Q-unsplash.jpg" alt="" width="50%">
+                    </div>
+                    <div class="imagen">
+                        <img src="imagenes/rachel-coyne-mTsotT-gMrY-unsplash.jpg" alt="" width="50%">
+                    </div>
+                    <div class="imagen">
+                        <img src="imagenes/soundtrap-n30_i7mx62o-unsplash.jpg" alt="" width="50%">
+                    </div>
+                </div>
             </div>
+
         </aside>
+    <div class="contador-likes ocultar">Likes: </div>
+    <script src="./script.js"></script>
     </main>
 </body>
-<script src="index.js"></script>
 </html>

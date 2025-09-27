@@ -1,6 +1,5 @@
 body{
      font-family: sans-serif;
-     /*background-color: hotpink;*/
      margin: 0;
 }
 ul {
@@ -16,6 +15,13 @@ a{
      text-decoration: none;
 }
 
+.dark {
+     background: #202124;
+     color: white;
+}
+.buttonPosts {
+     color: red;
+}
 .tarjeta img {
      width: 100%;
      
@@ -29,6 +35,8 @@ button {
      border: none;
      background-color: transparent;
      padding: 20px;
+     cursor: pointer;
+     text-decoration: underline;
 }
 
 #ads,#seeAll, #bestOfTheWeek, #travel{
@@ -46,6 +54,7 @@ section img, aside img {
 
 #travel {
      position: relative;
+     color: black;
 }
 
 #travel span {
@@ -94,6 +103,7 @@ section img, aside img {
 }
 
 #ads {
+     color: black;
      background-color: lightgreen;
 }
 #seeAll {
@@ -112,12 +122,14 @@ section img, aside img {
      border: solid 1px black;
      font-weight: bold;
      border-radius: 50%; 
-     padding: 20px;    
+     padding: 20px;
+     cursor: pointer;
+     text-decoration: none;
 }
 #ads * {
      display: block;
 }
-/*Breakpoints*/
+
 @media screen and (min-width: 769px){
      main {
           display: flex;
@@ -180,10 +192,113 @@ section img, aside img {
           display: block;
      }
 }
-.rojo {
-     background-color: red;
-}
 
 .ocultar {
      display: none;
+}
+
+.post{
+     padding: 20px;
+     border: solid 1px lightblue;
+     margin: 10px, 0;
+     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0);
+     border-radius: 20px;
+}
+
+#dark-button {
+     background: #202124;
+     color: white;
+     border-radius: 5px;
+     margin-top: 10px;
+     text-decoration: none;
+}
+
+#dark-button:hover {
+     transform: scale(1.02);
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.804);
+}
+
+#dark-button:active {
+     transform: scale(0.95);
+}
+
+.contador-likes{
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     font-size: 80px;
+     font-weight: bold;
+     background: rgb(128, 128, 250);
+     padding: 50px;
+     border-radius: 5px;
+     color: white;
+     z-index: 1;
+     pointer-events: none;
+}
+nav ul {
+     display: flex;
+     gap: 1rem;
+     list-style: none;
+     margin: 0;
+     padding: 0;
+}
+
+nav ul li {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.barra-buscar {
+     overflow: hidden;
+     padding: 10px;
+     position: relative;
+     width: 300px;
+}
+
+.barra-buscar button{
+     display: inline-block;
+     text-decoration: none;
+     color: white;
+     background: black;
+     border-radius: 5px;
+     padding: 5px;
+}
+
+.barra-buscar input {
+     display: inline-block;
+     margin-left: 10px;
+}
+
+.barra-buscar button:hover {
+     transform: scale(1.02);
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.804);
+}
+
+.barra-buscar button:active {
+     transform: scale(0.95);
+}
+
+
+.barra-buscar .sugerencias {
+     display: block;
+     overflow: hidden;
+     border-radius: 5px;
+     margin-top: 1px;
+     width: 177px;
+     margin-left: 10px;
+}
+
+.barra-buscar .sugerencias li {
+     display: block;
+     color: white;
+     padding: 10px;
+     background-color: #202124;
+     overflow: hidden;
+     white-space: nowrap;
+     cursor: pointer;
+}
+
+.barra-buscar .sugerencias li:hover {
+     background-color: rgb(31, 30, 30);
 }
